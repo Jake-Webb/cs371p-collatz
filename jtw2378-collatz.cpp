@@ -30,8 +30,12 @@ int main() {
 int maxCycleLength(int low, int high) {
 	int max = calculateCycleLength(low);
 	int temp;
-	for(int i = low; i < high; i++) {
+	int newLow = (high / 2) + 1;
+	if(newLow > low)
+		low= newLow;
+	for(int i = low; i <= high; i++) {
 		temp = calculateCycleLength(i);
+		cout << i << "'s cycleLength is: " << temp << endl;
 		if(temp > max)
 			max = temp;
 		}
