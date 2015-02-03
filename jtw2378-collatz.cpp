@@ -41,13 +41,14 @@ int maxCycleLength(int low, int high) {
 int calculateCycleLength(int num) {
 	int cycleLength = 1;
 	while(num != 1) {
-		if(num % 2 == 0)
+		if(num % 2 == 0) {
 			num /= 2;
-		else {
-			num = num + (num >> 1) + 1;
 			cycleLength++;
 		}
-		cycleLength++;
+		else {
+			num = num + (num >> 1) + 1;
+			cycleLength = cycleLength + 2;
+		}
 	}
 	return cycleLength;
 }
