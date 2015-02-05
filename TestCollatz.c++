@@ -29,11 +29,32 @@ using namespace std;
 // read
 // ----
 
-TEST(Collatz, read) {
+TEST(Collatz, read_1) {
     string s("1 10\n");
     const pair<int, int> p = collatz_read(s);
     ASSERT_EQ( 1, p.first);
     ASSERT_EQ(10, p.second);}
+
+TEST(Collatz, read_2) {
+    string s("5 5\n");
+    const pair<int, int> p = collatz_read(s);
+    ASSERT_EQ(5, p.first);
+    ASSERT_EQ(5, p.second);
+}
+
+TEST(Collatz, read_3) {
+    string s("8 4\n");
+    const pair<int, int> p = collatz_read(s);
+    ASSERT_EQ(8, p.first);
+    ASSERT_EQ(4, p.second);
+}
+
+TEST(Collatz, read_4) {
+    string s("900000 1000000\n");
+    const pair<int, int> p = collatz_read(s);
+    ASSERT_EQ(900000, p.first);
+    ASSERT_EQ(1000000, p.second);
+}
 
 // ----
 // eval
@@ -55,6 +76,18 @@ TEST(Collatz, eval_4) {
     const int v = collatz_eval(900, 1000);
     ASSERT_EQ(174, v);}
 
+TEST(Collatz, eval_5) {
+    const int v = collatz_eval(5, 5);
+    ASSERT_EQ(6, v);}
+
+TEST(Collatz, eval_6) {
+    const int v = collatz_eval(4, 8);
+    ASSERT_EQ(17, v);}
+
+TEST(Collatz, eval_7) {
+    const int v = collatz_eval(10000, 20000);
+    ASSERT_EQ(279, v);}
+
 // -----
 // print
 // -----
@@ -68,12 +101,47 @@ TEST(Collatz, print) {
 // solve
 // -----
 
-TEST(Collatz, solve) {
+TEST(Collatz, solve_1) {
     istringstream r("1 10\n100 200\n201 210\n900 1000\n");
     ostringstream w;
     collatz_solve(r, w);
     ASSERT_EQ("1 10 20\n100 200 125\n201 210 89\n900 1000 174\n", w.str());}
 
+TEST(Collatz, solve_2) {
+    istringstream r("4 8\n8 4\n");
+    ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("4 8 17\n8 4 17\n", w.str());}
+
+TEST(Collatz, solve_3) {
+    istringstream r("5 5\n10 10\n");
+    ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("5 5 6\n10 10 7\n", w.str());}
+
+TEST(Collatz, solve_4) {
+    istringstream r("1 100\n51 100\n");
+    ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("1 100 119\n51 100 119\n", w.str());}
+
+TEST(Collatz, solve_5) {
+    istringstream r("400000 500000\n500000 600000\n600000 700000\n");
+    ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("400000 500000 449\n500000 600000 470\n600000 700000 447\n", w.str());}
+
+TEST(Collatz, solve_6) {
+    istringstream r("1 1000000\n1000000 1\n");
+    ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("1 1000000 525\n1000000 1 525\n", w.str());}
+
+TEST(Collatz, solve_7) {
+    istringstream r("1111 2222\n3333 4444\n5555 6666\n");
+    ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("1111 2222 182\n3333 4444 238\n5555 6666 262\n", w.str());}
 /*
 % ls -al /usr/include/gtest/
 ...
