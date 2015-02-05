@@ -5,8 +5,8 @@ using namespace std;
 
 int calculateCycleLength(int);
 int maxCycleLength(int, int);
-void fillCache();
 void printCache();
+void printCache(int, int);
 
 const int CACHESIZE = 1000;
 
@@ -15,7 +15,6 @@ int cache[CACHESIZE];
 int main() {
 	int i, j, i2, j2, max;
 	string input, output;
-	fillCache();
 	//printCache();
 	while(getline(cin, input)) {
 		stringstream stream(input);
@@ -30,6 +29,7 @@ int main() {
 			j2 = j;
 		}
 		max = maxCycleLength(i2, j2);
+		//printCache(i2, j2);
 		cout << i << " " << j << " " << max << endl;
 	}
 	return 0;
@@ -52,6 +52,7 @@ int maxCycleLength(int low, int high) {
 
 int calculateCycleLength(int num) {
 	int cycleLength = 1;
+	int origNum = num;
 	while(num != 1) {
 		if(num < CACHESIZE) {
 			if(cache[num]) {
@@ -68,17 +69,19 @@ int calculateCycleLength(int num) {
 			cycleLength = cycleLength + 2;
 		}
 	}
+	if(origNum < CACHESIZE)
+		cache[origNum] = cycleLength;
 	return cycleLength;
-}
-
-void fillCache() {
-	for(int i = 1; i < CACHESIZE; i++) {
-		cache[i] = calculateCycleLength(i);
-	}
 }
 
 void printCache() {
 	for(int i = 1; i < CACHESIZE; i++) {
+		cout << i << "'s cycleLength is: " << cache[i] << endl;
+	}
+}
+
+void printCache(int low, int high) {
+	for(int i = low; i < high; i++) {
 		cout << i << "'s cycleLength is: " << cache[i] << endl;
 	}
 }
