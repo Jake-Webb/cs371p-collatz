@@ -1,0 +1,121 @@
+commit 19bf08dbbb420b0595d5c2d8e6b9e64c3622952b
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Thu Feb 5 19:13:17 2015 -0600
+
+    added comments
+
+commit ac089221eaf080960a7d5977b4b93458e2c809db
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Thu Feb 5 19:01:00 2015 -0600
+
+    required with submission
+
+commit cd516f245c9091d7b4bda3b3e0bc20a9eab6c1fa
+Merge: 8bfb7ef aa140f7
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Thu Feb 5 18:55:30 2015 -0600
+
+    Merge branch 'master' of https://github.com/Jake-Webb/cs371p-collatz
+
+commit aa140f73ac646a63c8e7759a189b32e8b799dd4b
+Author: Jake-Webb <jakewebb4@utexas.edu>
+Date:   Thu Feb 5 18:53:19 2015 -0600
+
+    Delete RunCollatz
+
+commit 8bfb7ef0f6dff3de2293395507920bdee5cada98
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Thu Feb 5 18:50:42 2015 -0600
+
+    required for submission
+
+commit cd16e28c05123bdc8a9d487226664e7d45b2dadc
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Thu Feb 5 18:47:36 2015 -0600
+
+
+
+commit 87c6a4d7da71dc922da5d7966d889ebe9f51a64c
+Author: Jake-Webb <jakewebb4@utexas.edu>
+Date:   Thu Feb 5 18:01:53 2015 -0600
+
+    Delete jtw2378-collatz.cpp
+
+commit 2c31545c4159400792e57f95a6abf8570993ec75
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Thu Feb 5 17:59:52 2015 -0600
+
+    100 line test cases with answers
+
+commit 307a6f6e010f6cf1bb69a04e01cd7e16095c6d85
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Thu Feb 5 17:59:00 2015 -0600
+
+    100 line test cases
+
+commit 4e24867d8fcecd69971ec33920f79a069fe078c9
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Wed Feb 4 20:57:34 2015 -0600
+
+    Passes Sphere tests
+
+commit ab257cf6072bab4ec2a311cce78482236e98f8ad
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Wed Feb 4 20:43:20 2015 -0600
+
+    Working with cache and opimizations
+
+commit d78f2125b9f318d12231a5b77760349796fe6819
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Wed Feb 4 20:41:06 2015 -0600
+
+    Fixed unit tests (2)
+
+commit bf50a8821065d1e8c1438767a56d2577f2b4455f
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Wed Feb 4 20:38:32 2015 -0600
+
+    Personal tests added
+
+commit 66bdbfd1669459cf644a3ed09dea82c5039154b8
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Wed Feb 4 19:32:56 2015 -0600
+
+    Fixed unit tests
+
+commit a3f830f446c40842ee6974551be8ff9e2be00ca9
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Wed Feb 4 19:31:59 2015 -0600
+
+    Fixed unit tests
+
+commit d4355c8867c8ca807aef8f79b83b7c5a57289471
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Wed Feb 4 18:42:19 2015 -0600
+
+    Collatz working with optimizations, cache loaded at calculation time
+
+commit 5bb76fff4c04eb425ed79fee4bfea90861865bda
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Tue Feb 3 16:37:47 2015 -0600
+
+    Collatz working with range and odd optimizations, simple preloaded cache implemented
+
+commit 20ab8631c23ac1a68db4f07960acb27a986e3488
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Tue Feb 3 15:53:47 2015 -0600
+
+    Collatz working with range optimization, no cache implemented
+
+commit 7c9b885790f5688e9c4dffb23d2c14be07301c25
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Tue Feb 3 14:47:16 2015 -0600
+
+    Collatz working with odd calculation optimized, no cache
+
+commit 1cc6d8272486adf3563a6ad8b9ca00b5b252d2a0
+Author: Jacob Webb <jakewebb@cs.utexas.edu>
+Date:   Tue Feb 3 14:22:41 2015 -0600
+
+    Collatz works without any cache implem.
