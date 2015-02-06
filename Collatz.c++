@@ -41,18 +41,18 @@ pair<int, int> collatz_read (const string& s) {
 
 int collatz_eval (int low, int high) {
     int switchNum;
-    if(low > high) {
+    if(low > high) { // will set the ints so low is the smaller value
         switchNum = low;
         low = high;
         high = switchNum;
     }
     int max = calculateCycleLength(low);
     int temp;
-    int newLow = (high / 2) + 1;
+    int newLow = (high / 2) + 1; // optimize the range by only checking the upper half
     if(newLow > low)
         low = newLow;
-    for(int i = low; i <= high; i++) {
-        temp = calculateCycleLength(i);
+    for(int i = low; i <= high; i++) { // calculating cycleLength of every number in new range
+        temp = calculateCycleLength(i); // and maintaining the max value
         if(temp > max)
             max = temp;
         }
@@ -63,9 +63,9 @@ int calculateCycleLength(int num) {
     int cycleLength = 1;
     int origNum = num;
     while(num > 1) {
-        if(num < CACHESIZE) {
+        if(num < CACHESIZE) { // check if value is in cache
             if(cache[num]) {
-                cycleLength += cache[num] - 1;
+                cycleLength += cache[num] - 1; // if it is use it instead of calculating
                 break;
             }
         }
@@ -74,12 +74,12 @@ int calculateCycleLength(int num) {
             cycleLength++;
         }
         else {
-            num = num + (num >> 1) + 1;
+            num = num + (num >> 1) + 1; // odd optimization, can do two calculations at once
             cycleLength = cycleLength + 2;
         }
     }
     if(origNum < CACHESIZE)
-        cache[origNum] = cycleLength;
+        cache[origNum] = cycleLength; // store cycleLength in cache
     return cycleLength;
 }
 
